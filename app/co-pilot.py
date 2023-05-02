@@ -24,7 +24,7 @@ def process_voice_input():
         audio = r.listen(source)
 
     try:
-        text = r.recognize_google_cloud(audio) # replace with your Speech-to-Text API of choice
+        text = r.recognize_amazon(audio) # replace with your Speech-to-Text API of choice
         print(f"You said: {text}")
         if text.lower() in key_commands:
             execute_key_press(key_commands[text.lower()])
